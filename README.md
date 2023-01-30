@@ -9,7 +9,7 @@ contain data in the CDM data model.
 # Usage
 
 ```bash
-docker-compose build # build the containers if requried
+docker-compose build # build the containers if required
 docker-compose up -d # start up the containers
 docker exec -it wmo-im-opencdms-cli bash # enter bash shell
 cd /local/app # change directory to location of code

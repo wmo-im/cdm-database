@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  database:
+    build:
+      context: .
+      dockerfile: ./docker/timescaledb/Dockerfile
+    container_name: wmo-im-opencdms-database
+    ports:
+      - 5432:5432
+    env_file:
+      - default.env
+    volumes:
+      - C:\Users\dberr\data\opencdms-test\:/local/data
+      - wmo-im-postgres:/home/postgres
+
+  opencdms-cli:
+    build:
+      context: .
+      dockerfile: ./docker/ubuntu/Dockerfile
+    container_name: wmo-im-opencdms-cli
+    env_file:
+      - default.env
+    tty: true
+    volumes:
+      - C:\Users\dberr\development\wmo-im-opencdms:/local/app
+
+volumes:
+  wmo-im-postgres:

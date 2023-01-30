@@ -1,0 +1,5 @@
+GeoAlchemy2==0.12.5
+jinja2
+psycopg2==2.9.5
+SQLAlchemy==1.4.46
+SQLAlchemy-Utils==0.39.0

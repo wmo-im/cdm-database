@@ -11,8 +11,8 @@ services:
     env_file:
       - default.env
     volumes:
-      - <path-to-data-on-host>:/local/data
       - wmo-im-postgres:/home/postgres
+      - "./:/local/app"
 
   opencdms-cli:
     build:
@@ -23,7 +23,7 @@ services:
       - default.env
     tty: true
     volumes:
-      - <path-to-source-on-host>:/local/app
+      - "./:/local/app"
 
 volumes:
   wmo-im-postgres:

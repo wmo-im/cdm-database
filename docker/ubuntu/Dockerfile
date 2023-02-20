@@ -11,7 +11,7 @@ RUN echo "Acquire::Check-Valid-Until \"false\";\nAcquire::Check-Date \"false\";"
     && apt-get install -y ${DEBIAN_PACKAGES} \
     && apt-get install -y python3 python3-pip libpq-dev \
     && pip3 install -r requirements.txt \
-    && pip3 install --no-cache-dir https://github.com/opencdms/pyopencdms/archive/dib_testing.zip
+    && pip3 install --no-cache-dir https://github.com/opencdms/pyopencdms/archive/main.zip
 
 
 
